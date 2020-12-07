@@ -1,0 +1,29 @@
+<body *ngIf="Educanet">
+
+    <div class="logo">
+        <span></span>
+        <svg class="ico">
+            <use xlink:href="assets/ico.svg#icon-graduate"></use>
+          </svg>    
+          <h3>E</h3>
+    </div>
+
+    <div class="writing">
+        Educanet Tunisie
+    </div>
+</body>
+<div class="login" >
+    <div class="filter"></div>
+<div class="form">
+    <form [formGroup]="form">
+        <h1>Login</h1>
+        <div class="input">
+        <input type="text" placeholder="Email" formControlName="email">
+        </div>
+        <div class="input">
+        <input type="password" placeholder="Password" formControlName="password">
+        </div>
+<button>Login</button>
+    </form>
+</div>
+</div>

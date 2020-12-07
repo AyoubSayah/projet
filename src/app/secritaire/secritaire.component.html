@@ -1,0 +1,59 @@
+
+<mat-drawer-container class="example-container" [hasBackdrop]="false"  >
+    <mat-drawer  #drawer class="drawer"mode="over"  > 
+        <div class="background-nav" >
+            <div class="titre">
+                <div class="logo">
+                   
+                    <svg class="ico">
+                        <use xlink:href="assets/ico.svg#icon-graduate"></use>
+                      </svg>    
+                      <h3>E</h3>
+                </div>
+                <span>DUCANET</span>
+            </div>
+            <hr>
+            <ul>
+                <li class="sidebar-item " (click)="sidebar='consulter'">
+                    <a class="sidebar-link waves-effect " [class]="sidebar=='consulter'? 'active' : ''"><svg class="icon"><use xlink:href="assets/ico.svg#icon-columns"></use></svg> Consulter Demandes</a>
+                </li>
+                <li class="sidebar-item " (click)="sidebar='liste'">
+                    <a class="sidebar-link waves-effect "  [class]="sidebar=='liste'? 'active' : ''"><svg class="icon"><use xlink:href="assets/ico.svg#icon-list"></use></svg>Liste Des Eléves</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="btn-nav"  (click)="drawer.toggle()">
+            <svg class="icon-btn-nav" ><use xlink:href="assets/ico.svg#icon-chevron-left" ></use></svg>
+
+            </div>
+    </mat-drawer>
+    <div class="example-sidenav-content" >
+        <div class="btn-nav0"  (click)="drawer.toggle()">
+            <svg class="icon-btn-nav" ><use xlink:href="assets/ico.svg#icon-chevron-right" ></use></svg>
+
+            </div>
+            <div class="navbar"><mat-toolbar>
+                <div class="element1">
+                <div class="logo">
+                   
+                    <svg class="ico">
+                        <use xlink:href="assets/ico.svg#icon-graduate"></use>
+                      </svg>    
+                      <h3>E</h3>
+                </div>
+                <span>DUCANET</span>
+            </div>
+            <div class="element1">  
+                Samira mhani             
+                 <div class="secrtaire"><img src="assets/imag.jpg" alt=""></div>
+             </div>
+              </mat-toolbar></div>
+            
+                <app-consulterdemandes class="app" *ngIf="sidebar=='consulter'"></app-consulterdemandes> 
+                <app-liste-deseleves class="app" *ngIf="sidebar=='liste'"></app-liste-deseleves>
+    </div>
+</mat-drawer-container>

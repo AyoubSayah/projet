@@ -1,0 +1,135 @@
+.enfant {
+	background-image: url('../../../assets/SVG/undraw_back_to_school_inwc.svg');
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0%;
+	z-index: 1;
+	.filter {
+		position: absolute;
+		top: 0%;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.199);
+		z-index: 1;
+    }
+  
+	.form {
+	    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    width: 40rem;
+    min-height: 300px;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 100%;
+
+  
+		h2 {
+			text-align: center;
+			color: #064990;
+			text-transform: uppercase;
+		}
+		.liste-enfats {
+			display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+			.enf{
+                position: relative;
+             
+                .img{
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 6rem;
+                    margin: 1rem;
+                    cursor: pointer;
+                   
+                    -webkit-tap-highlight-color: transparent;
+        
+                }
+                .checkbox {
+                    display: none;
+                    &:checked + label .img{
+                        filter: brightness(0.5);
+                    }
+                    &:checked + label .icon{
+                    display:unset;
+                    }
+                }
+              
+                
+                .icon{
+                    position: absolute;
+                    width: 5rem;
+                    height: 5rem;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 9;
+                    fill: yellowgreen;
+                    display: none;
+                    cursor: pointer;
+
+                    
+                }
+            }
+        }
+       
+	}
+}
+@media (max-width: 900px) {
+    .form {
+        width: 99% !important;
+    }
+    .img{
+        margin: .3rem !important;
+    }
+    .liste-enfats{
+        // justify-content: space-between !important;
+    }
+  }
+  
+  input{
+    display: block;
+    margin: 2rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    width: 5rem;
+    border: 1px solid #8c8a8a;
+    background-color: #f7f7f7f7;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+
+&:focus{
+    outline: none;
+}
+  }
+  button{
+    padding: .5rem 2rem;
+    background-color: #064990;
+    color: white;
+    font-weight: 700;
+    border-radius: 21px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+    margin-top:-1rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:focus{outline:none}
+    &:hover{
+        transform: translateX(-50%) scale(1.05) translateY(-2px) ;
+    }
+}

@@ -1,0 +1,168 @@
+body{
+    background-color: #064990;
+    animation: goup 1s;
+    z-index: 2;
+    animation-delay: 2s;
+    position: relative;
+    top: 0%;
+    width: 100%;
+    
+    .logo{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) ;
+        width: 2rem;
+        box-shadow: 0rem 1rem 1rem #0000004d;
+
+
+       span{
+           position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) ;
+        background-color: white;
+        width:2rem;
+        height: 2rem;
+        padding: 2rem 2rem;
+        border-radius: 10rem;
+        animation: animation 2s ;
+   border: 7px dashed #064990;
+    
+       } 
+       h3{ 
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) ;
+        color: #064990;
+        font-weight: 900;
+        font-size: 2.5rem;
+       }
+            .ico{
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                top: 20%;
+                left: 23%;
+                fill: #064990;
+                z-index: 1;
+                transform: translate(-60%, -111%) rotate(-28deg);
+
+            }
+    }
+    .writing{
+        position: absolute;
+        top: 90%;
+        transform: translateY(-10%);
+        color: white;
+          font-weight: 700;
+          font-size: 1.5rem;
+          width:100%;
+          text-align: center;
+    }
+}
+@keyframes animation{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(2250deg);
+    }
+
+}
+@keyframes goup{
+    0%{
+        transform: translateY(0%);
+    
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+
+}
+.login{
+    background-image: url('../../assets/SVG/undraw_back_to_school_inwc.svg');
+    width: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+    .filter{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        min-height: 100vh;  min-height: -webkit-fill-available;
+
+        background-color: rgba(0, 0, 0, 0.199);
+        z-index: 1;
+    }
+    .form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+
+        h1{
+            text-align: center;
+            color:  #064990;
+            font-weight: 800;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 3;
+        }
+       
+        input{
+            display: block;
+            margin: 2rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: none;
+            width: 13rem;
+            border-left: 7px solid #064990;
+        &.ng-invalid{
+            border-left: 7px solid #a53131;
+
+        }
+        &.ng-pristine{
+            border-left: 7px solid #064990;
+
+        }
+        
+        &:focus{
+            outline: none;
+        }
+
+        }
+        button{
+            padding: .5rem 2rem;
+            background-color: #064990;
+            color: white;
+            font-weight: 700;
+            border-radius: 21px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            &:focus{outline:none}
+            &:hover{
+                transform: translateX(-50%) scale(1.05) translateY(-5px) ;
+            }
+        }
+        .at{
+            position: absolute;
+            left: 10%;
+            color: blue;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+    
+}

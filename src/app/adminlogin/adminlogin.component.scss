@@ -1,0 +1,85 @@
+.login{
+    background-image: url('../../assets/office-1209640_1920.jpg');
+    width: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+    .filter{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        min-height: 100vh;  min-height: -webkit-fill-available;
+
+        background-color: rgba(0, 0, 0, 0.199);
+        z-index: 1;
+    }
+    .form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+
+        h1{
+            text-align: center;
+            color:  #064990;
+            font-weight: 800;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 3;
+        }
+       
+        input{
+            display: block;
+            margin: 2rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: none;
+            width: 13rem;
+            border-left: 7px solid #064990;
+        &.ng-invalid{
+            border-left: 7px solid #a53131;
+
+        }
+        &.ng-pristine{
+            border-left: 7px solid #064990;
+
+        }
+        
+        &:focus{
+            outline: none;
+        }
+
+        }
+        button{
+            padding: .5rem 2rem;
+            background-color: #064990;
+            color: white;
+            font-weight: 700;
+            border-radius: 21px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            &:focus{outline:none}
+            &:hover{
+                transform: translateX(-50%) scale(1.05) translateY(-5px) ;
+            }
+        }
+        .at{
+            position: absolute;
+            left: 10%;
+            color: blue;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+    
+}

@@ -1,0 +1,50 @@
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Niveau</mat-label>
+    <mat-select>
+      <mat-option value="1"> A </mat-option>
+      <mat-option value="2"> B </mat-option>
+      <mat-option value="3"> C </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Class</mat-label>
+    <mat-select>
+      <mat-option value="1"> A </mat-option>
+      <mat-option value="2"> B </mat-option>
+      <mat-option value="3"> C </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  
+    <ng-container matColumnDef="Nomenfant">
+      <th mat-header-cell *matHeaderCellDef>NomEnfant </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nomenfant}} </td>
+    </ng-container>
+   
+  
+  
+    <ng-container matColumnDef="Secritaire">
+        <th mat-header-cell *matHeaderCellDef> Secritaire </th>
+        <td mat-cell *matCellDef="let element">{{element.Secritaire}}</td>
+      </ng-container>
+  
+    <ng-container matColumnDef="Date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Parent">
+        <th mat-header-cell *matHeaderCellDef> Parent </th>
+        <td mat-cell *matCellDef="let element">{{element.Parent}}</td>
+       
+      </ng-container>
+     
+    
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>    
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
